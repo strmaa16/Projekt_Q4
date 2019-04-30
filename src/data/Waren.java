@@ -16,12 +16,12 @@ public class Waren implements Comparable<Waren>, Serializable
     
     private transient static DateTimeFormatter datum = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    public Waren(String sorte, int menge, double gewicht, LocalDate ablaufdatum)
+    public Waren(String sorte, int menge, double gewicht)
     {
         this.sorte = sorte;
         this.menge = menge;
         this.gewicht = gewicht;
-        this.ablaufdatum = ablaufdatum;
+        this.ablaufdatum  = ablaufdatum.plusDays(5);
        
     }
 
